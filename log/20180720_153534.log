@@ -1,0 +1,27 @@
+2018-07-20 15:35:35,374 INFO <function database_to_datarepo at 0x07D0CCD8>: 0.7403626441955566 seconds.
+2018-07-20 15:35:36,349 INFO <function database_to_datarepo at 0x07D0CCD8>: 0.974104642868042 seconds.
+2018-07-20 15:35:36,350 INFO trade
+2018-07-20 15:35:36,351 INFO trade
+2018-07-20 15:35:36,351 INFO trade
+2018-07-20 15:35:36,352 INFO trade
+2018-07-20 15:35:36,353 INFO trade
+2018-07-20 15:35:36,353 INFO trade
+2018-07-20 15:35:36,354 INFO trade
+2018-07-20 15:35:36,354 INFO trade
+2018-07-20 15:35:36,355 INFO trade
+2018-07-20 15:35:36,355 INFO trade
+2018-07-20 15:35:36,355 INFO trade
+2018-07-20 15:35:36,363 INFO trade
+2018-07-20 15:35:36,364 INFO trade
+2018-07-20 15:35:36,365 INFO trade
+2018-07-20 15:35:36,367 INFO trade
+2018-07-20 15:35:36,369 INFO trade
+2018-07-20 15:35:36,369 INFO trade
+2018-07-20 15:35:36,370 INFO trade
+2018-07-20 15:35:36,371 INFO trade
+2018-07-20 15:35:36,372 INFO trade
+2018-07-20 15:35:36,372 INFO trade
+2018-07-20 15:35:36,373 INFO trade
+2018-07-20 15:35:36,374 INFO trade
+2018-07-20 15:35:36,375 INFO The profits are []
+2018-07-20 15:35:36,376 INFO The trades are [<Modules.Trade.Trade object at 0x0A2A99F0>, <Modules.Trade.Trade object at 0x0A2A98F0>, <Modules.Trade.Trade object at 0x0A2A9A70>, <Modules.Trade.Trade object at 0x0A2A9970>, <Modules.Trade.Trade object at 0x0A2A9A30>, <Modules.Trade.Trade object at 0x0A2A99B0>, <Modules.Trade.Trade object at 0x0A2A9B30>, <Modules.Trade.Trade object at 0x0A2A9890>, <Modules.Trade.Trade object at 0x0A2A98D0>, <Modules.Trade.Trade object at 0x0A2A9AD0>, <Modules.Trade.Trade object at 0x0A2A9930>, <Modules.Trade.Trade object at 0x0A2A9A10>, <Modules.Trade.Trade object at 0x0A2A9A50>, <Modules.Trade.Trade object at 0x0A2A9950>, <Modules.Trade.Trade object at 0x0A2A9AB0>, <Modules.Trade.Trade object at 0x0A2A9990>, <Modules.Trade.Trade object at 0x0A2A9AF0>, <Modules.Trade.Trade object at 0x0A2A9A90>, <Modules.Trade.Trade object at 0x0A2A9B10>, <Modules.Trade.Trade object at 0x0A2A9B50>, <Modules.Trade.Trade object at 0x0A2A9B70>, <Modules.Trade.Trade object at 0x0A2A9B90>, <Modules.Trade.Trade object at 0x0A2A9BB0>]

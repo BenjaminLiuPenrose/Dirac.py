@@ -76,14 +76,14 @@ class Trade():
 		self._commission_rate = 0.0;
 		self._commission = 0.0;
 
+		self._init_cost = 0.0;
 		self._profit = 0.0;
 
-		self._quantity = 0;
-
+		self._quantity = 0
 		self._entry_time = [];
 		self._exit_time = [];
 
-		self._direction = [];
+		self._direction = "";
 
 	@property
 	def uuid(self):
@@ -130,7 +130,7 @@ class Trade():
 		return self._profit_target_price
 
 	@profit_target_price.setter
-	def profit_targe_price(self, value):
+	def profit_target_price(self, value):
 		self._profit_target_price = value
 
 	@property
@@ -156,6 +156,14 @@ class Trade():
 	@profit.setter
 	def profit(self, value):
 		self._profit = value
+
+	@property
+	def init_cost(self):
+		return self._init_cost
+
+	@profit.setter
+	def init_cost(self, value):
+		self._init_cost = value
 
 	@property
 	def quantity(self):
@@ -189,17 +197,32 @@ class Trade():
 	def direction(self, value):
 		self._direction = value
 
-	def open(self):
-		self.instrument =
-		self.entry_price =
-		self.quantity =
-		self.entry_time =
-		self.direction =
+	def open(self, order):
+		self.uuid = order['uuid']
+		self.instrument = order['instrument']
+		self.entry_price = order['entry price']
+		self.quantity = order['quantity']
+		self.entry_time = order['entry time']
+		self.direction = order['direction']
+		self.stop_loss_price = order['stop loss price']
+		self.profit_target_price = order['profit target price']
+		self.commission_rate = order['commission rate']
+		if self.direction == "Long":
+			self.init_cost = self.entry_price*self.quantity*(1+self._commission_rate);
+		else :
+			self.init_cost = -self.entry_price*self.quantity*(1-self.commission_rate);
 
-	def close(self):
-		self.exit_price =
-		self.exit_time =
-		self.profit =
+	def close(self, order):
+		self.exit_price = order['exit price']
+		self.exit_time = order['exit time']
+		if self.direction == "Long":
+			self.profit = self.exit_price*self.quantity*(1-self.commission_rate) - self.entry_price*self.quantity*(1+self._commission_rate);
+		else :
+			self.profit = self.entry_price*self.quantity*(1-self.commission_rate) - self.exit_price*self.quantity*(1+self._commission_rate);
+		self.direction = "Neutural"
+
+	def to_string(self):
+		logging.debug('\nThe Trade:\nuuid: {}\ninstrument: {}\nentry_price: {}\nexit_price: {}\nstop_loss_price: {}\nprofit_target_price: {}\ncommission_rate: {}\ncommission: {}\nprofit: {}\nquantity: {}\nentry_time: {}\nexit_time: {}\ndirection: {}'.format(self.uuid, self.instrument, self.entry_price, self.exit_price, self.stop_loss_price, self.profit_target_price, self.commission_rate, self.commission, self.profit, self.quantity, self.entry_time, self.exit_time, self.direction));
 
 
 

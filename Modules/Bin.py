@@ -11,7 +11,7 @@ import os, time, logging, sys
 import copy, math
 import functools, itertools
 import numpy as np
-import datetime
+import datetime as dt
 import pandas as pd
 import matplotlib.pyplot as plt
 import scipy.optimize as opt
@@ -54,6 +54,11 @@ class Bin():
 		self._low_ask = 0.0;
 		self._close_ask = 0.0;
 
+		self._open_price = 0.0;
+		self._high_price = 0.0;
+		self._low_price = 0.0;
+		self._close_price = 0.0;
+
 		self._volume = 0.0;
 
 		self._pnl = 0.0;
@@ -66,6 +71,8 @@ class Bin():
 
 	@open_time.setter
 	def open_time(self, value):
+		if isinstance(value, str):
+			value = dt.datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
 		self._open_time = value
 
 	@property
@@ -74,6 +81,8 @@ class Bin():
 
 	@close_time.setter
 	def close_time(self, value):
+		if isinstance(value, str):
+			value = dt.datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
 		self._close_time = value
 
 	@property
@@ -82,7 +91,7 @@ class Bin():
 
 	@open_bid.setter
 	def open_bid(self, value):
-		self._open_bid = value
+		self._open_bid = round(float(value), 6)
 
 	@property
 	def close_bid(self):
@@ -90,7 +99,7 @@ class Bin():
 
 	@close_bid.setter
 	def close_bid(self, value):
-		self._close_bid = value
+		self._close_bid = round(float(value), 6)
 
 	@property
 	def high_bid(self):
@@ -98,7 +107,7 @@ class Bin():
 
 	@high_bid.setter
 	def high_bid(self, value):
-		self._high_bid = value
+		self._high_bid = round(float(value), 6)
 
 	@property
 	def low_bid(self):
@@ -106,7 +115,7 @@ class Bin():
 
 	@low_bid.setter
 	def low_bid(self, value):
-		self._low_bid = value
+		self._low_bid = round(float(value), 6)
 
 	@property
 	def open_ask(self):
@@ -114,7 +123,7 @@ class Bin():
 
 	@open_ask.setter
 	def open_ask(self, value):
-		self._open_ask = value
+		self._open_ask = round(float(value), 6)
 
 	@property
 	def close_ask(self):
@@ -122,7 +131,7 @@ class Bin():
 
 	@close_ask.setter
 	def close_ask(self, value):
-		self._close_ask = value
+		self._close_ask = round(float(value), 6)
 
 	@property
 	def high_ask(self):
@@ -130,7 +139,7 @@ class Bin():
 
 	@high_ask.setter
 	def high_ask(self, value):
-		self._high_ask = value
+		self._high_ask = round(float(value), 6)
 
 	@property
 	def low_ask(self):
@@ -138,7 +147,39 @@ class Bin():
 
 	@low_ask.setter
 	def low_ask(self, value):
-		self._low_ask = value
+		self._low_ask = round(float(value), 6)
+
+	@property
+	def open_price(self):
+		return self._open_price
+
+	@open_price.setter
+	def open_price(self, value):
+		self._open_price = round(float(value), 6)
+
+	@property
+	def close_price(self):
+		return self._close_price
+
+	@close_price.setter
+	def close_price(self, value):
+		self._close_price = round(float(value), 6)
+
+	@property
+	def high_price(self):
+		return self._high_price
+
+	@high_price.setter
+	def high_price(self, value):
+		self._high_price = round(float(value), 6)
+
+	@property
+	def low_price(self):
+		return self._low_price
+
+	@low_price.setter
+	def low_price(self, value):
+		self._low_price = round(float(value), 6)
 
 	@property
 	def volume(self):
@@ -146,7 +187,7 @@ class Bin():
 
 	@volume.setter
 	def volume(self, value):
-		self._volume = value
+		self._volume = round(float(value), 1)
 
 	@property
 	def pnl(self):
@@ -163,6 +204,15 @@ class Bin():
 	@length.setter
 	def length(self, value):
 		self._length = value
+
+	def calc(self):
+		self._open_price = 0.5*(self.open_bid+self.open_ask);
+		self._high_price = 0.5*(self.high_bid+self.high_ask);
+		self._low_price = 0.5*(self.low_bid+self.low_ask);
+		self._close_price = 0.5*(self.close_bid+self.close_ask);
+
+	def to_string(self):
+		logging.debug('\nThe Bin: \nopen_time: {}\nclose_time: {}\nopen_bid: {}\nclose_bid: {}\nhigh_bid: {}\nlow_bid: {}\nopen_ask: {}\nclose_ask: {}\nhigh_ask: {}\nlow_ask: {}\nvolume: {}\npnl: {}\nlength: {}'.format(self.open_time, self.close_time, self.open_bid, self.close_bid, self.high_bid, self.low_bid, self.open_ask, self.close_ask, self.high_ask, self.low_ask, self.volume, self.pnl, self.length))
 
 
 

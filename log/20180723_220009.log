@@ -1,0 +1,13 @@
+2018-07-23 22:00:11,339 INFO <function database_to_datarepo at 0x0A811978>: 1.0387 seconds.
+2018-07-23 22:00:12,060 INFO <function database_to_datarepo at 0x0A811978>: 0.7208 seconds.
+2018-07-23 22:00:13,289 INFO <function database_to_datarepo at 0x0A811978>: 1.2273 seconds.
+2018-07-23 22:00:14,386 INFO <function database_to_datarepo at 0x0A811978>: 1.0952 seconds.
+2018-07-23 22:00:15,646 INFO <function database_to_datarepo at 0x0A811978>: 1.2598 seconds.
+2018-07-23 22:00:16,563 INFO <function database_to_datarepo at 0x0A811978>: 0.9153 seconds.
+2018-07-23 22:00:17,540 INFO <function database_to_datarepo at 0x0A811978>: 0.9764 seconds.
+2018-07-23 22:00:18,448 INFO <function database_to_datarepo at 0x0A811978>: 0.9011 seconds.
+2018-07-23 22:00:19,619 INFO <function database_to_datarepo at 0x0A811978>: 1.1709 seconds.
+2018-07-23 22:00:20,589 INFO <function database_to_datarepo at 0x0A811978>: 0.9682 seconds.
+2018-07-23 22:00:21,608 INFO <function database_to_datarepo at 0x0A811978>: 1.018 seconds.
+2018-07-23 22:00:22,882 INFO <function database_to_datarepo at 0x0A811978>: 1.2729 seconds.
+2018-07-23 22:00:31,393 INFO <function multiProcess at 0x0A811AE0>: 8.5093 seconds.

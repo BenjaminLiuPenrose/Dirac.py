@@ -25,10 +25,8 @@ from Modules.Dirac_model import *
 CURRENT_TIME = config.CURRENT_TIME
 CURRENT_PATH = config.CURRENT_PATH
 
-if not os.path.exists(CURRENT_PATH+'/log/'):
-	os.makedirs(CURRENT_PATH+'/log/')
-if not os.path.exists(CURRENT_PATH+'/plt/'):
-	os.makedirs(CURRENT_PATH+'/plt/')
+if not os.path.exists(CURRENT_PATH+'/output/'+CURRENT_TIME):
+	os.makedirs(CURRENT_PATH+'/output/'+CURRENT_TIME)
 if not os.path.exists(CURRENT_PATH+'/database/'):
 	os.makedirs(CURRENT_PATH+'/database/')
 # if not os.path.exists(CURRENT_PATH+'/backtest/'+CURRENT_TIME):
@@ -36,7 +34,7 @@ if not os.path.exists(CURRENT_PATH+'/database/'):
 
 logger = logging.getLogger();
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
-hdlr = logging.FileHandler(CURRENT_PATH+'/log/{}.log'.format(CURRENT_TIME));
+hdlr = logging.FileHandler("{}/output/{}/{}.log".format(CURRENT_PATH, CURRENT_TIME, CURRENT_TIME));
 hdlr.setFormatter(formatter)
 logger.addHandler(hdlr)
 

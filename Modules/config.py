@@ -32,7 +32,6 @@ FREQ_CONVERSION = {
 	"annually": (252, 1)
 	}
 BINS_FREQ =['m1', 'H4', 'D1'];
-# INSTRUMENTS = ['EUR/USD'];
 INSTRUMENTS = ['AUD/CAD', 'AUD/CHF', 'AUD/JPY', 'AUD/NZD', 'AUD/USD', \
  'CAD/CHF', 'CAD/JPY', 'CHF/JPY', 'TRY/JPY', 'ZAR/JPY', \
  'EUR/CAD', 'EUR/CHF', 'EUR/GBP', 'EUR/JPY', 'EUR/NOK', 'EUR/NZD', 'EUR/SEK', 'EUR/TRY', 'EUR/USD', 'EUR/AUD', \

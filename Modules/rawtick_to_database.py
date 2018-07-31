@@ -20,6 +20,7 @@ import importlib
 from fxcmpy import fxcmpy_tick_data_reader as tdr
 
 from Modules.Bin import *
+from Modules.Tools import *
 import Modules.config as config
 CURRENT_TIME = config.CURRENT_TIME
 CURRENT_PATH = config.CURRENT_PATH
@@ -31,7 +32,7 @@ if not os.path.exists(CURRENT_PATH+'/database/'):
 File content:
 
 ==================================================================================================='''
-
+@Timer
 def rawtick_to_database(start, end):
 	'''===================================================================================================
 

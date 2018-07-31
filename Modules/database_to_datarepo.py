@@ -17,16 +17,18 @@ import pandas as pd
 
 from Modules.Bin import *
 from Modules.DataRepo import *
+from Modules.Tools import *
 import Modules.config as config
 
 CURRENT_TIME = config.CURRENT_TIME
 CURRENT_PATH = config.CURRENT_PATH
-BINS_FREQ = config.BINS_FREQ
 INSTRUMENTS = config.INSTRUMENTS
+BINS_FREQ = config.BINS_FREQ
 '''===================================================================================================
 File content:
 
 ==================================================================================================='''
+@Timer
 def database_to_datarepo(instrument, start, end):
 	'''===================================================================================================
 
@@ -38,15 +40,16 @@ def database_to_datarepo(instrument, start, end):
 
 	# Handling Phrase
 	for freq in BINS_FREQ:
-		with open('{0}/database/{1}/{2}/{3}_{4}.csv'.format(CURRENT_PATH, ins.replace('/', ''), freq, tart.strftime('%Y%m%d'), end.strftime('%Y%m%d')), 'r') as file:
+		with open('{0}/database/{1}/{2}/{3}_{4}.csv'.format(CURRENT_PATH, ins.replace('/', ''), freq, start.strftime('%Y%m%d'), end.strftime('%Y%m%d')), 'r') as file:
 			reader = csv.reader(file, delimiter=',');
 			first_line_bool = True
 			for row in reader:
 				if first_line_bool == True:
 					first_line_bool = False;
-					break;
+					continue;
 				bin = Bin();
 				bin.open_time, bin.close_time, bin.open_bid, bin.close_bid, bin.high_bid, bin.low_bid, bin.open_ask, bin.close_ask, bin.high_ask, bin.low_ask, bin.volume = row;
+				bin.calc();
 				if freq == 'm1':
 					datarepo.add_bins_m1(bin);
 				elif freq == 'H4':
@@ -55,7 +58,7 @@ def database_to_datarepo(instrument, start, end):
 					datarepo.add_bins_D1(bin);
 				else :
 					pass
-	logging.info(datarepo)
+	logging.debug(datarepo.to_string())
 
 	# Checking Phrase
 	return datarepo

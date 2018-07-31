@@ -1,0 +1,13 @@
+2018-07-22 10:57:03,581 INFO <function database_to_datarepo at 0x084CEBB8>: 0.4039 seconds.
+2018-07-22 10:57:04,108 INFO <function database_to_datarepo at 0x084CEBB8>: 0.5269 seconds.
+2018-07-22 10:57:04,681 INFO <function database_to_datarepo at 0x084CEBB8>: 0.5716 seconds.
+2018-07-22 10:57:05,165 INFO <function database_to_datarepo at 0x084CEBB8>: 0.4829 seconds.
+2018-07-22 10:57:05,709 INFO <function database_to_datarepo at 0x084CEBB8>: 0.5417 seconds.
+2018-07-22 10:57:06,128 INFO <function database_to_datarepo at 0x084CEBB8>: 0.4191 seconds.
+2018-07-22 10:57:06,675 INFO <function database_to_datarepo at 0x084CEBB8>: 0.5462 seconds.
+2018-07-22 10:57:07,124 INFO <function database_to_datarepo at 0x084CEBB8>: 0.4413 seconds.
+2018-07-22 10:57:07,667 INFO <function database_to_datarepo at 0x084CEBB8>: 0.5424 seconds.
+2018-07-22 10:57:08,194 INFO <function database_to_datarepo at 0x084CEBB8>: 0.5264 seconds.
+2018-07-22 10:57:08,682 INFO <function database_to_datarepo at 0x084CEBB8>: 0.4877 seconds.
+2018-07-22 10:57:09,261 INFO <function database_to_datarepo at 0x084CEBB8>: 0.5778 seconds.
+2018-07-22 10:57:09,275 INFO The profits are [0.91754, 0.54088, 0.71754, -0.12128, 0.41752, 0.51614, -1.02056, -0.88006, 0.57458, 0.48554, 0.24304, 0.80724, 0.44248, 0.51012, 0.82422, -0.21652, 0.39112, 0.45862, 0.353, 0.5458, 0.7643, -0.0137, 0.4063, 1.2037, 0.9038, 1.0062, 0.31352, 0.38404, 0.31642, 0.52258, 0.498, 0.379, 0.18644, -0.20452, 0.42862, 0.21812, 0.25424, 0.35524, 0.42388, 0.629, 0.41646, -0.22118, 0.37562, -0.02624, 0.5779, 0.4828]

@@ -66,8 +66,11 @@ class DataRepo(metaclass=Singleton):
 	def add_bins_D1(self, value):
 		self._bins_D1.append(value)
 
-	def add_bin_H4(self, value):
+	def add_bins_H4(self, value):
 		self._bins_H4.append(value)
 
-	def add_bin_m1(self, value):
+	def add_bins_m1(self, value):
 		self._bins_m1.append(value)
+
+	def to_string(self):
+		logging.debug('\nThe datarepo is: \nbins_D1: {}\nbins_H4: {}\nbins_m1: {}'.format(self.bins_D1[:5], self.bins_H4[:5], self.bins_m1[:5]));
