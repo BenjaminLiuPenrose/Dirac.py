@@ -1,0 +1,8 @@
+# ignore all logs
+*.log
+*.csv
+*.pyc
+/plt
+/output
+/database
+/log
