@@ -2,7 +2,7 @@
 *.log
 *.csv
 *.pyc
-/plt
-/output
-/database
-/log
+**/plt
+**/output
+**/database
+**/log

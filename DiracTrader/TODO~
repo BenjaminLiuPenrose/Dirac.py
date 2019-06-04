@@ -1,0 +1,4 @@
+# TODO
+- change from argparse to config.ini
+- cownload pdf and extract contents
+- extract contents from hml
